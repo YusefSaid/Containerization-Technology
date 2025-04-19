@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Beetroot Salad",
+      "description": "A tasty beet-based salad",
+      "ingredients": ["beetroot", "feta cheese", "walnuts"]
+    },
+    {
+      "id": 2,
+      "name": "Beetroot Juice",
+      "description": "Freshly squeezed beetroot juice",
+      "ingredients": ["beetroot", "apple", "lemon"]
+    }
+  ]
+  
