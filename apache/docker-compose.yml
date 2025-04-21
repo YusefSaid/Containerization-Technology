@@ -1,0 +1,15 @@
+services:
+  apache:
+    image: httpd:2.4
+    container_name: apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./apache.conf:/usr/local/apache2/conf/httpd.conf:ro
+
+  beetroot:
+    image: ${REGISTRY_IMAGE}:${TAG}
+    environment:
+      - BEETROOT_JSON_PATH=/data/beetroot.json
+    volumes:
+      - ../data/beetroot.json:/data/beetroot.json:ro

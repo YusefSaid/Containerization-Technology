@@ -1,0 +1,13 @@
+http:
+  routers:
+    beetroot:
+      rule: "PathPrefix(`/`)"
+      service: beetroot
+      entryPoints:
+        - web
+
+  services:
+    beetroot:
+      loadBalancer:
+        servers:
+          - url: "http://beetroot:8080"
