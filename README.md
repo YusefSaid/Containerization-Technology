@@ -48,6 +48,12 @@ Ensure your Docker daemon configuration includes:
 ```
 ## Architecture Overview
 
+<img width="1664" alt="Exercise 02 - Containerization Technology" src="https://github.com/user-attachments/assets/d27d44d4-4cc9-44a5-87ed-a1c28b77d290" />
+Multi-stage build flow for creating the Beetroot API container image.
+
+<img width="752" alt="Exercise 02 - Containerization Technology (1)" src="https://github.com/user-attachments/assets/ba0cf006-49c9-428d-849d-f7b796f28d57" />
+Topology of Beetroot API deployment using a reverse proxy (Traefik, Nginx, or Apache).
+
 ## Project Structure
 
 ```
