@@ -1,4 +1,4 @@
-# Exercise 02 - Containerization Technology
+# Containerization Technology
 
 This project demonstrates comprehensive containerization practices using Docker, including multi-stage builds, CI/CD integration with GitLab, and reverse proxy configurations. The setup containerizes the Beetroot API using Infrastructure as Code principles with Docker Compose orchestration and automated deployment pipelines.
 
