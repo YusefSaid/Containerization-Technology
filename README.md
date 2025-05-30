@@ -6,7 +6,6 @@ This project demonstrates comprehensive containerization practices using Docker,
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
-- [Architecture Overview](#architecture-Overview)
 - [Project Structure](#project-structure)
 - [Quick Start](#quick-start)
 - [Components](#components)
@@ -46,13 +45,6 @@ Ensure your Docker daemon configuration includes:
   "mtu": 1442
 }
 ```
-## Architecture Overview
-
-<img width="1664" alt="Exercise 02 - Containerization Technology" src="https://github.com/user-attachments/assets/d27d44d4-4cc9-44a5-87ed-a1c28b77d290" />
-Multi-stage build flow for creating the Beetroot API container image.
-
-<img width="752" alt="Exercise 02 - Containerization Technology (1)" src="https://github.com/user-attachments/assets/ba0cf006-49c9-428d-849d-f7b796f28d57" />
-Topology of Beetroot API deployment using a reverse proxy (Traefik, Nginx, or Apache).
 
 ## Project Structure
 
@@ -165,17 +157,15 @@ The Dockerfile implements a two-stage build process for optimal security and siz
 
 ### Build Flow
 
-```mermaid
-graph TD
-    A[golang:1.21-alpine] --> B[Install Git + tzdata]
-    B --> C[Clone Beetroot Repository]
-    C --> D[go mod tidy]
-    D --> E[go build -o beetroot]
-    E --> F[alpine:3.18]
-    F --> G[Configure Timezone]
-    G --> H[Copy Binary from Builder]
-    H --> I[Final Optimized Image]
-```
+<img width="600" alt="Multi-stage build flow for creating the Beetroot API container image" src="https://github.com/user-attachments/assets/d27d44d4-4cc9-44a5-87ed-a1c28b77d290" />
+
+*Figure 1: Multi-stage build flow for creating the Beetroot API container image.*
+
+### Network Topology
+
+<img width="500" alt="Topology of Beetroot API deployment using a reverse proxy" src="https://github.com/user-attachments/assets/ba0cf006-49c9-428d-849d-f7b796f28d57" />
+
+*Figure 2: Topology of Beetroot API deployment using a reverse proxy (Traefik, Nginx, or Apache).*
 
 ## Reverse Proxy Configurations
 
